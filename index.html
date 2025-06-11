@@ -140,6 +140,12 @@
   background-color: #e9f6fc;
   text-align: left;
 }
+.auto-scroll-wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 
 .strategic-section .section-label {
   color: #0aa1dd;
@@ -167,12 +173,15 @@
     overflow: hidden;
     position: relative;
     padding: 20px 0;
+    
   }
 
   .auto-scroll-track {
     display: flex;
     width: calc(300px * 8); /* 8 boxes */
-    animation: scroll-step 16s steps(8) infinite;
+    animation: scroll-left 20s linear infinite;
+
+    
   }
 
   .scroll-box {
@@ -192,6 +201,7 @@
     padding: 15px;
     box-sizing: border-box;
     flex-shrink: 0;
+    
   }
 
   .scroll-box i {
@@ -204,13 +214,13 @@
     color: #444;
   }
 
-  @keyframes scroll-step {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-1200px); /* 4 cards * 300px */
-    }
+  @keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
   }
 </style>
 
