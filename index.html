@@ -12,6 +12,7 @@
   <style>
     body {
   background-color: #e9f6fc;
+   padding-top: 50px;
 }
 
     .grow-on-hover {
@@ -24,26 +25,83 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand grow-on-hover" href="#">LSF</a>
-      <button class="navbar-toggler grow-on-hover" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<!-- ✅ FIXED NAVBAR -->
+<header class="custom-header">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container py-2 px-4 d-flex justify-content-between align-items-center" 
+         style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px); width: 100%;">
+      
+      <!-- LSF Logo Left-Aligned -->
+      <a class="navbar-brand me-auto" href="#">
+        <img src="img/home/lsf.webp" alt="LSF Logo" height="40">
+      </a>
+
+      <!-- Toggle for Mobile -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link grow-on-hover" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link grow-on-hover" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link grow-on-hover" href="#fellows">Fellows</a></li>
-          <li class="nav-item"><a class="nav-link grow-on-hover" href="#get-involved">Get Involved</a></li>
-          <li class="nav-item"><a class="nav-link grow-on-hover" href="#contact">Contact</a></li>
+
+      <!-- Nav Links + Button -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fellows">Fellows</a></li>
+          <li class="nav-item"><a class="nav-link" href="#get-involved">Get Involved</a></li>
+
+          <!-- Contact Us: show inside menu on mobile -->
+          <li class="nav-item d-lg-none mt-2">
+            <a href="#contact" class="btn btn-primary btn-sm w-100">Contact Us</a>
+          </li>
         </ul>
+
+        <!-- Contact Us: desktop only -->
+        <a href="#contact" class="btn btn-primary btn-sm rounded-pill ms-3 d-none d-lg-inline-block">Contact Us</a>
       </div>
     </div>
   </nav>
+</header>
 
- <section class="hero-section py-5">
+<!-- ✅ STYLES -->
+<style>
+  /* Remove default white background & padding from mobile dropdown */
+.navbar-collapse {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+/* Remove blue bg box around Contact Us in mobile */
+.navbar-collapse .btn {
+  background-color: transparent !important;
+  border: none !important;
+  color: #0d6efd !important;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  width: auto !important;
+  text-align: left;
+}
+
+/* Optional: smooth nav link look */
+.navbar-nav .nav-link {
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* On hover */
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+  background-color: transparent !important;
+}
+
+</style>
+
+
+<section class="hero-section py-5">
   <div class="container">
     <div class="row align-items-center">
       
@@ -378,44 +436,56 @@
     <p class="text-uppercase text-primary fw-bold">FAQ</p>
     <h2 class="fw-bold mb-4">Have any question? Find answer here.</h2>
 
-    <div class="faq-item">
-      <button class="faq-question">What is Lanka Software Foundation ? <span class="icon">+</span></button>
+    <div class="faq-item"> <!--Q1-->
+      <button class="faq-question">
+        <span class="question-text">What is Lanka Software Foundation ?</span>
+        <span class="icon">+</span>
+      </button>
       <div class="faq-answer">
         <p>Lanka Software Foundation (LSF) is a Non-governmental non profit organization to support technical upgradation of Sri Lanka's public infrastructure and beyond to the global governments by helping digital solution designing, and open-source community's works.</p>
       </div>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-question">How can I get involved with LSF projects and help them? <span class="icon">+</span></button>
+    <div class="faq-item"> <!--Q2-->
+      <button class="faq-question">
+        <span class="question-text">How can I get involved with LSF projects and help them?</span>
+        <span class="icon">+</span>
+      </button>
       <div class="faq-answer">
         <p>Starting from our "Get Involved" page would be ideal. Here you can choose the current project you are most interested in and can handle from a list. We welcome hobbyists as well as developers, scholars, legislators, and more.</p>
       </div>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-question">What kinds of projects do LSF funds? <span class="icon">+</span></button>
+    <div class="faq-item"> <!--Q3-->
+      <button class="faq-question">
+        <span class="question-text">What kinds of projects do LSF funds?</span>
+        <span class="icon">+</span>
+      </button>
       <div class="faq-answer">
         <p>LSF encourages the incubation of open-source projects which are innovative in nature and predominantly serve digital governance, public infrastructure, e-government, digital identity, finance, etc.</p>
       </div>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Are there mentorship or internship opportunities available at LSF? <span class="icon">+</span></button>
+    <div class="faq-item"> <!--Q4-->
+      <button class="faq-question">
+        <span class="question-text">Are there mentorship or internship opportunities available at LSF?</span>
+        <span class="icon">+</span>
+      </button>
       <div class="faq-answer">
         <p>LSF offers mentorship and internship programs that provide professional guidance and hands-on exposure along with certain other advantages such as networking and career development in technology and open-source domains.</p>
       </div>
     </div>
-
-    <div class="faq-item">
-      <button class="faq-question">Who are LSF’s main partners and collaborators? <span class="icon">+</span></button>
+    <div class="faq-item"> <!--Q5-->
+      <button class="faq-question">
+        <span class="question-text">Who are LSF’s main partners and collaborators?</span>
+        <span class="icon">+</span>
+      </button>
       <div class="faq-answer">
         <p>LSF has a worldwide view of the collaborations like governments, international institutions, universities, private-sector technology entrepreneurs, and open-source communities working together on cutting-edge digital transformation projects.</p>
       </div>
     </div>
+
   </div>
 </section>
 <style>
- .faq-section {
+  .faq-section {
   background-color: #e9f6fc;
 }
 
@@ -461,35 +531,362 @@
 }
 
 </style>
-<!-- section 5 community-->
- <section class="testimonial-section py-5">
-  <div class="container text-center">
+<!--quote -->
+  <style>
+    body {
+      background-color: #e9f6fc;
+    }
+
+    .testimonial-section {
+      padding: 60px 0;
+    }
+
+    .testimonial-scroll-wrapper {
+      overflow: hidden;         /* Hide scroll bar */
+      pointer-events: none;     /* Disable mouse drag */
+      user-select: none;
+    }
+
+    .testimonial-scroll-track {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.6s ease;
+      /* Prevent wrapping */
+      flex-wrap: nowrap;
+      /* Enable smooth scroll */
+      will-change: transform;
+    }
+
+    .testimonial-card {
+      flex: 0 0 48%;
+      max-width: 48%;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+      text-align: left;
+    }
+
+    .testimonial-card p {
+      margin: 0.5rem 0;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+      margin-top: 40px;
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 3px;
+      right: 20px;
+      width: 40px;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    @media (max-width: 700px) {
+      .testimonial-card {
+        flex: 0 0 90%;
+        max-width: 90%;
+      }
+    }
+  </style>
+<!--boxes scrolling-->
+<section class="testimonial-section text-center">
+  <div class="container">
     <p class="text-uppercase text-primary fw-bold">Voices of Our Community</p>
     <h2 class="fw-bold mb-4">Real-world Impact</h2>
-    <p class="text-muted mb-5">Hear from government partners, open-source contributors, and international policymakers about how LSF is transforming digital governance and public infrastructure.</p>
+    <p class="text-muted mb-5">
+      Hear from government partners, open-source contributors, and international policymakers about how LSF is transforming digital governance and public infrastructure.
+    </p>
 
-    <div class="testimonial-carousel d-flex overflow-auto gap-4 px-2 scroll-snap-x">
-      <div class="testimonial-card bg-white p-4 rounded shadow-sm min-w-300 scroll-snap-start position-relative">
-        <div class="quote-mark fs-1 text-secondary position-absolute top-0 start-0 ms-3">“</div>
-        <p class="fst-italic text-muted mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna.</p>
-        <p class="fw-bold mt-4 mb-0">Jason Brody</p>
-        <p class="text-primary fw-bold">CEO, ABC Company</p>
-      </div>
+    <div class="testimonial-scroll-wrapper">
+      <div class="testimonial-scroll-track" id="scrollTrack">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <img src="img/home/quate.webp" class="quote-icon" alt="quote">
+          <p class="testimonial-text">Open source makes the world better. LSF is a big part of that.</p>
+          <p class="fw-bold mb-0">Jason Brody</p>
+          <p class="text-primary fw-bold">CEO, ABC Company</p>
+        </div>
 
-      <div class="testimonial-card bg-white p-4 rounded shadow-sm min-w-300 scroll-snap-start position-relative">
-        <div class="quote-mark fs-1 text-secondary position-absolute top-0 start-0 ms-3">“</div>
-        <p class="fst-italic text-muted mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna.</p>
-        <p class="fw-bold mt-4 mb-0">Jason Brody</p>
-        <p class="text-primary fw-bold">CEO, ABC Company</p>
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <img src="img/home/quate.webp" class="quote-icon" alt="quote">
+          <p class="testimonial-text">The way LSF empowers tech teams is simply transformative.</p>
+          <p class="fw-bold mb-0">Maria Silva</p>
+          <p class="text-primary fw-bold">Policy Lead, GovOrg</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <img src="img/home/quate.webp" class="quote-icon" alt="quote">
+          <p class="testimonial-text">LSF makes collaboration between sectors actually work.</p>
+          <p class="fw-bold mb-0">Kevin Zhang</p>
+          <p class="text-primary fw-bold">CTO, OpenInfra</p>
+        </div>
+
+        <!-- Card 4 (Optional) -->
+        <div class="testimonial-card">
+          <img src="img/home/quate.webp" class="quote-icon" alt="quote">
+          <p class="testimonial-text">Government innovation is faster and easier thanks to LSF.</p>
+          <p class="fw-bold mb-0">Amara Jayasuriya</p>
+          <p class="text-primary fw-bold">Digital Ministry</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<style>
+  body {
+  background-color: #e9f6fc;
+}
 
+.testimonial-section {
+  padding: 60px 0;
+}
+
+.testimonial-scroll-wrapper {
+  overflow: hidden;
+}
+
+.testimonial-scroll-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.6s ease-in-out;
+}
+
+.testimonial-card {
+  flex: 0 0 48%;
+  max-width: 48%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  position: relative;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: #555;
+  margin-top: 30px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 45px;
+  opacity: 0.85;
+}
+
+/* ✅ Date badge style */
+.date-badge {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: #0d6efd;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+</style>
+
+<script>
+const track = document.getElementById('scrollTrack');
+const cards = document.querySelectorAll('.testimonial-card');
+let index = 0;
+const cardWidth = cards[0].offsetWidth + 32; // gap is 2rem = 32px
+
+function slideNext() {
+  index++;
+  if (index > cards.length - 2) index = 0;
+  track.style.transform = `translateX(-${index * cardWidth}px)`;
+}
+
+setInterval(slideNext, 3000);
+</script>
+
+
+
+  <title>Resources & Articles Slider</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+
+<section class="carousel-container text-center py-5">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Resources & Articles</h2>
+
+    <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/home/box.webp" class="w-100 rounded" alt="Article 1">
+              <div class="resource-caption">
+                <small>Articles</small>
+                <h6>Building software to run elections in Sri Lanka (and beyond)</h6>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="img/home/box.webp" class="w-100 rounded" alt="Article 2">
+              <div class="resource-caption">
+                <small>Articles</small>
+                <h6>GIG Python Library</h6>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="img/home/box.webp" class="w-100 rounded" alt="Article 3">
+              <div class="resource-caption">
+                <small>Articles</small>
+                <h6>GIS Python Library</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="img/home/box.webp" class="w-100 rounded" alt="Article 4">
+              <div class="resource-caption">
+                <small>Articles</small>
+                <h6>Open Data for Democracy</h6>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="img/home/box.webp" class="w-100 rounded" alt="Article 5">
+              <div class="resource-caption">
+                <small>Articles</small>
+                <h6>Citizen-Centric Platforms</h6>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="img/home/box.webp" class="w-100 rounded" alt="Article 6">
+              <div class="resource-caption">
+                <small>Articles</small>
+                <h6>Digital Infrastructure Insights</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#articleCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <a href="#" class="btn btn-primary mt-4">Read More</a>
+  </div>
+</section>
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2025 Lanka Software Foundation. All rights reserved.</p>
-  </footer>
+  <!-- ======= Footer ======= -->
+<footer class="footer-section text-white py-5">
+  <div class="container">
+    <div class="row gy-4">
+      
+      <div class="col-6 col-md-3">
+        <h6 class="fw-bold">Menu</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">About</a></li>
+          <li><a href="#" class="footer-link">Board Of Directors</a></li>
+          <li><a href="#" class="footer-link">LSF Fellows</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <h6 class="fw-bold">Information</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">What We Do</a></li>
+          <li><a href="#" class="footer-link">News & Insights</a></li>
+          <li><a href="#" class="footer-link">Get Involved</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <h6 class="fw-bold">Information</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-3">
+        <h6 class="fw-bold">Information</h6>
+        <p class="mb-1">+94-777374957</p>
+        <p class="mb-0">contact@opensource.lk</p>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+      <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="footer-icon"><i class="fab fa-x-twitter"></i></a>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-4 small flex-wrap text-center text-md-start">
+      <p class="mb-0">Lanka Software Foundation 2025. All rights reserved.</p>
+      <p class="mb-0 fw-bold">A Recreation by WENUX</p>
+    </div>
+  </div>
+</footer>
+<style>
+  .footer-section {
+  background-color: #01579b;
+}
+
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-icon {
+  font-size: 1.2rem;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.footer-icon:hover {
+  background-color: white;
+  color: #01579b;
+}
+
+</style>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
