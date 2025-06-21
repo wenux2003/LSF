@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Our Projects - LSF</title>
+  <style>
+      /* === HERO BANNER === */
+  .page-hero-image {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+  }
+
+  .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+    margin-bottom: 0; /* Removes gap after image */
+    padding-bottom: 0;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(255, 255, 255);
+  }
+
+  .hero-text h1 {
+  font-size: 2rem; /* or 1.8rem or whatever you want */
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+    /*main section*/
+    body {
+      background: #e6f4fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .header-space {
+      height: 1px;
+    }
+    .projects-header {
+      margin-top: 0;
+      padding-top: 1px;
+      padding-bottom: 10px;
+      text-align: left;
+    }
+    .projects-header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #22223b;
+    }
+    .projects-header p {
+      color: #3d5a80;
+      font-size: 1.08rem;
+      margin-bottom: 0;
+      max-width: 600px;
+    }
+    .filter-btns {
+      margin: 32px 0 24px 0;
+      display: flex;
+      gap: 12px;
+    }
+    .filter-btn {
+      background: #fff;
+      color: #1976d2;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(30,64,175,0.06);
+      transition: background 0.2s, color 0.2s;
+    }
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: #1976d2;
+      color: #fff;
+    }
+    .projects-divider {
+      border: none;
+      border-top: 2px solid #00000036;
+      margin: 0 0 32px 0;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    
+    .project-card:hover {
+      box-shadow: 0 6px 24px rgba(30,64,175,0.10);
+      transform: translateY(-2px) scale(1.01);
+    }
+    /* Card image area (rounded rectangle, only image, no text) */
+    
+    /* Project meta (period, title, description) */
+    .project-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  padding: 1px 28px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #e0e7ef;
+  align-items: flex-start; /* align children to left */
+}
+
+/* Make the image block aligned left, fixed width */
+.project-image-area {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f1f5fa;
+  margin-bottom: 1px;
+}
+
+.project-image-area img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Meta */
+.project-period {
+  color: #1976d2;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.project-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #22223b;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1.01rem;
+  color: #415a77;
+  line-height: 1.5;
+  margin-bottom: 2px;
+}
+
+/* Single tech image bar */
+.tech-single {
+  width: 90px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: #f1f5fa;
+  border: 1px solid #e0e7ef;
+  padding: 4px 8px;
+}
+
+    
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .main-container {
+        padding: 0 10px;
+      }
+      .project-card {
+        padding: 22px 14px;
+      }
+    }
+    @media (max-width: 600px) {
+      .projects-header h2 {
+        font-size: 1.3rem;
+      }
+      .projects-header p {
+        font-size: 0.97rem;
+      }
+      .filter-btn {
+        font-size: 0.97rem;
+        padding: 8px 16px;
+      }
+    }
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+    <!--hero section-->
+  <section class="page-hero-image">
+    <img src="img/about/abot bg.webp" alt="Empowering Sri Lanka" class="img-fluid banner-img">
+    <div class="hero-text">
+      <h1>PROJECTS</h1>
+    </div>
+  </section>
+
+  <div class="header-space"></div>
+  <div class="main-container">
+    <!-- ====== HEADER ====== -->
+    <div class="projects-header">
+      <h2>Our Projects</h2>
+      <p>Driving Innovation and Engineering Solutions for a Sustainable Future with Global Impact, Transforming Challenges into Opportunities for All.</p>
+    </div>
+
+    <!-- ====== FILTER BUTTONS ====== -->
+    <div class="filter-btns">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="technology">Technology</button>
+    </div>
+
+    <!-- ====== HORIZONTAL LINE ====== -->
+    <hr class="projects-divider" />
+
+    <!-- ====== PROJECTS GRID ====== -->
+    <div class="projects-grid">
+      <!-- ====== CARD 1 ====== -->
+      <div class="project-card" data-category="technology">
+        <!-- Rounded rectangle area with only ONE image -->
+        <div class="project-image-area">
+          <img src="img/projects/sahana.webp" alt="Sahana Foundation Banner" />
+        </div>
+        <div class="project-period">2025–Present</div>
+        <div class="project-title">LSF Silver Email Platform</div>
+        <div class="project-description">
+          A robust, scalable email solution for governments requiring secure communications, with full control and customization features, built with Python and Kubernetes for high reliability.
+        </div>
+        <!-- ONE tech image only -->
+        <img src="img/projects/lng phy.webp" alt="Built with Python & Kubernetes" class="tech-single" />
+      </div>
+      <!-- ====== CARD 2 ====== -->
+      <div class="project-card" data-category="technology">
+        <div class="project-image-area">
+          <img src="img/projects/sahana.webp" alt="Sahana Foundation Banner" />
+        </div>
+        <div class="project-period">2025–Present</div>
+        <div class="project-title">LSF Silver Email Platform</div>
+        <div class="project-description">
+          A robust, scalable email solution for governments requiring secure communications, with full control and customization features, built with Python and Kubernetes for high reliability.
+        </div>
+        <img src="img/projects/lng phy.webp" alt="Built with Python & Kubernetes" class="tech-single" />
+      </div>
+      <!-- ====== CARD 3 ====== -->
+      <div class="project-card" data-category="technology">
+        <div class="project-image-area">
+          <img src="img/projects/sahana.webp" alt="Sahana Foundation Banner" />
+        </div>
+        <div class="project-period">2025–Present</div>
+        <div class="project-title">LSF Silver Email Platform</div>
+        <div class="project-description">
+          A robust, scalable email solution for governments requiring secure communications, with full control and customization features, built with Python and Kubernetes for high reliability.
+        </div>
+        <img src="img/projects/lng phy.webp" alt="Built with Python & Kubernetes" class="tech-single" />
+      </div>
+      <!-- ====== CARD 4 (Non-Technology Example) ====== -->
+      <div class="project-card" data-category="other">
+        <div class="project-image-area">
+          <img src="img/projects/sahana.webp" alt="Community Outreach Banner" />
+        </div>
+        <div class="project-period">2024–Present</div>
+        <div class="project-title">Community Outreach Program</div>
+        <div class="project-description">
+          A community-based initiative focused on education and social development, providing resources and support to underserved communities across various regions.
+        </div>
+        <img src="img/projects/lng phy.webp" alt="Community" class="tech-single" />
+      </div>
+    </div>
+  </div>
+  <script>
+    // Filtering logic for 'All' and 'Technology' buttons
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.getAttribute('data-filter');
+        document.querySelectorAll('.project-card').forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

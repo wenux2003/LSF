@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get Involved - LSF</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e9f6fc;
+    }
+
+    /* === HERO BANNER === */
+    .page-hero-image {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      margin-bottom: -20px; /* 🟡 Reduce bottom space */
+    }
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      margin: 0;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    /* === TESTIMONIAL SECTION === */
+    .testimonial-section {
+      padding: 30px 20px 60px; /* 🟡 Top reduced */
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .testimonial-section .subtitle {
+      color: #0d6efd;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .testimonial-section h2 {
+      margin-top: 5px;
+      font-size: 28px;
+    }
+
+    .testimonial-slider-wrapper {
+      overflow: hidden;
+      margin-top: 40px;
+      position: relative;
+    }
+
+    .testimonial-track {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .testimonial-card {
+      flex: 0 0 48%;
+      max-width: 48%;
+      background-color: #fff;
+      padding: 1.5rem 1.5rem 1rem; /* 🟡 Less padding */
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .testimonial-card::before {
+      content: "❝";
+      font-size: 50px;
+      color: #ccc;
+      position: absolute;
+      top: 5px;
+      left: 15px;
+    }
+
+    .testimonial-text {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.6;
+      padding-top: 30px;
+    }
+
+    .testimonial-author {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .testimonial-role {
+      color: #0d6efd;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .testimonial-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HERO -->
+  <section class="page-hero-image">
+    <img src="img/about/abot bg.webp" alt="Empowering Sri Lanka" class="img-fluid banner-img">
+    <div class="hero-text">
+      <h1>GET INVOLVED</h1>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL SLIDER -->
+  <section class="testimonial-section">
+    <p class="subtitle">Our Impact</p>
+    <h2>What Our Volunteers Say</h2>
+
+    <div class="testimonial-slider-wrapper">
+      <div class="testimonial-track" id="testimonialTrack">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna.</p>
+          <p class="testimonial-author">Jason Brody</p>
+          <p class="testimonial-role">CEO, ABC Company</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">Aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit dignissim sodales ut eu sem.</p>
+          <p class="testimonial-author">Maria Silva</p>
+          <p class="testimonial-role">Volunteer, GovOrg</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">Pharetra magna ac placerat vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt dui ut ornare.</p>
+          <p class="testimonial-author">Kevin Zhang</p>
+          <p class="testimonial-role">Engineer, OpenInfra</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card">
+          <p class="testimonial-text">Faucibus turpis in eu mi bibendum neque egestas congue quisque egestas diam in arcu cursus euismod quis.</p>
+          <p class="testimonial-author">Amara Jayasuriya</p>
+          <p class="testimonial-role">Coordinator, Digital Ministry</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider Script -->
+  <script>
+    const track = document.getElementById('testimonialTrack');
+    const cards = document.querySelectorAll('.testimonial-card');
+    let index = 0;
+
+    function slideNext() {
+      const card = cards[0];
+      const gap = 32; // 2rem gap
+      const visibleCards = window.innerWidth <= 768 ? 1 : 2;
+      const cardWidth = card.offsetWidth + gap;
+      index++;
+      if (index > cards.length - visibleCards) index = 0;
+      track.style.transform = `translateX(-${index * cardWidth}px)`;
+    }
+
+    setInterval(slideNext, 3000);
+
+    window.addEventListener('resize', () => {
+      index = 0;
+      track.style.transform = `translateX(0px)`;
+    });
+  </script>
+
+  <!--blue banner-->
+<div class="hero-quote-banner">
+  <div class="lion-wrapper left">
+    <img src="img/involved/‭lion.silver.webp" alt="Lion Left">
+  </div>
+  <div class="banner-text-wrapper">
+    <h2 class="banner-text">
+      “If you want to see positive change in your country,<br>be a part of it”
+    </h2>
+  </div>
+  <div class="lion-wrapper right">
+    <img src="img/involved/‭lion.silver.webp" alt="Lion Right">
+  </div>
+</div>
+
+<section class="participation-section">
+  <h2>Here’s how you can participate in the community</h2>
+</section>
+
+<style>
+.hero-quote-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #0070c0, #004a99);
+  height: 340px; /* taller blue bar */
+  padding: 0 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.lion-wrapper {
+  flex-shrink: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.lion-wrapper img {
+  height: 85%; /* not full height to leave padding */
+  object-fit: contain;
+}
+
+.lion-wrapper.left {
+  justify-content: flex-start;
+}
+
+.lion-wrapper.right {
+  justify-content: flex-end;
+}
+
+.banner-text-wrapper {
+  flex: 1;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.banner-text {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-quote-banner {
+    height: 280px;
+    padding: 0 30px;
+  }
+
+  .banner-text {
+    font-size: 30px;
+  }
+
+  .lion-wrapper img {
+    height: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-quote-banner {
+    height: 220px;
+    padding: 0 20px;
+  }
+
+  .banner-text {
+    font-size: 20px;
+  }
+
+  .lion-wrapper img {
+    height: 60%;
+  }
+}
+.participation-section {
+  background-color: #e6f6fb; /* matches your site's light blue */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.participation-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #001b44; /* dark navy text */
+  margin: 0;
+}
+
+</style>
+<!--invloved steps-->
+<!-- Timeline Section with Number on the Line -->
+<section class="timeline-section">
+
+  <!-- Timeline Item 1 -->
+  <div class="timeline-item">
+  <div class="timeline-left first"> <!-- 👈 only here -->
+    <div class="number-block">
+      <img src="img/involved/1.webp" alt="01">
+    </div>
+    <div class="line"></div>
+  </div>
+  <div class="timeline-content">
+    <h3>Join LSF mailing lists</h3>
+    <p>Many LSF mailing lists are open to the public and enable you to stay engaged and aware of project updates so that you can contribute when you have time in your schedule. Our team and volunteers also use the mailing lists to shout out for expert help and post about issues they need advice on.</p>
+    <p>If you’re interested, sign up for one of them, or all of them and connect to the community!</p>
+    <div class="btn-group">
+      <a href="fellows.html" class="custom-btn">Elections</a>
+      <a href="fellows.html" class="custom-btn">Environment</a>
+      <a href="fellows.html" class="custom-btn">Architecture</a>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Timeline Item 2 -->
+  <div class="timeline-item">
+    <div class="timeline-left">
+      <div class="number-block">
+        <img src="img/involved/2.webp" alt="02">
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="timeline-content">
+      <h3>Follow Us</h3>
+      <p>Join us through our social media platforms to connect.</p>
+      <div class="social-icons">
+  <a href="https://facebook.com" target="_blank">
+    <img src="img/involved/fb.jpg" alt="Facebook">
+  </a>
+  <a href="https://instagram.com" target="_blank">
+    <img src="img/involved/insta.png" alt="Instagram">
+  </a>
+  <a href="https://linkedin.com" target="_blank">
+    <img src="img/involved/in.png" alt="LinkedIn">
+  </a>
+  <a href="https://twitter.com" target="_blank">
+    <img src="img/involved/x.png" alt="X">
+  </a>
+</div>
+
+    </div>
+  </div>
+
+  <!-- Timeline Item 3 -->
+  <div class="timeline-item">
+    <div class="timeline-left">
+      <div class="number-block">
+        <img src="img/involved/3.webp" alt="01">
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="timeline-content">
+      <h3>Contribute to Projects</h3>
+      <p>Visit Projects Page to see more.</p>
+      <p>LSF invites anyone to contribute via Github issues. Check out the relevant GitHub repository and documentation, select an issue that matches your skill strengths and send a pull request for review. Some repos will label issues as a “good first issue” to guide you</p>
+      <p>If you’re not sure where to start, connect with a member of the team on the mailing list for more information.</p>
+      
+    </div>
+  </div>
+
+    <!-- Timeline Item 4 -->
+  <div class="timeline-item">
+    <div class="timeline-left">
+      <div class="number-block">
+        <img src="img/involved/4.webp" alt="01">
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="timeline-content">
+      <h3>Contribute to training materials and workshops</h3>
+      <p>Are you an expert in a particular technology, language or functional domain? Do you enjoy sharing your knowledge with others?</p>
+      <p>Join us and help us build technical capacity in government organizations through training and knowledge transfers, and enable the government to own, evolve and maintain open source systems well into the future.</p>
+    </div>
+  </div>
+      <!-- Timeline Item 5 -->
+  <div class="timeline-item">
+    <div class="timeline-left">
+      <div class="number-block">
+        <img src="img/involved/5.webp" alt="01">
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="timeline-content">
+      <h3>If you work in government, get LSF engaged in a project</h3>
+      <p>We are passionate about building open source systems to help the country run better. Open source helps the government build and evolve systems cost effectively and sustainably. It enables government agency teams to invite collaboration from the best and brightest across Sri Lanka.</p>
+    </div>
+  </div>
+      <!-- Timeline Item 6 -->
+  <div class="timeline-item">
+    <div class="timeline-left">
+      <div class="number-block">
+        <img src="img/involved/6.webp" alt="01">
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="timeline-content">
+      <h3>Attend hackathons and events</h3>
+      <p>LSF hosts hackathons and other events throughout the year.</p>
+      <p>Follow us on our social media channels and stay updated through our mailing lists to hear about our upcoming events and how you can be a part of them. We’re looking forward to seeing you!</p>
+    </div>
+  </div>
+      <!-- Timeline Item 7 -->
+  <div class="timeline-item">
+    <div class="timeline-left">
+      <div class="number-block">
+        <img src="img/involved/7.webp" alt="01">
+      </div>
+    </div>
+    <div class="timeline-content">
+      <h3>Join the LSF Alumni Group</h3>
+      <p>If you have already contributed to projects, join our LSF Alumni Group to stay in touch with other contributors and volunteers.</p>
+       <div class="btn-group">
+          <a href="fellows.html" class="custom-btn">LSF ALUMNI GROUP</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline-left.first {
+  margin-top: 10px;
+}
+
+.timeline-section {
+  background: #fdffffc2;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  max-width: 900px;
+  width: 90%;
+}
+
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+  transform: translateY(50px);
+}
+
+.number-block img {
+  width: 200px;
+}
+
+.line {
+  width: 4px;
+  height: 450px;
+  background: #0070c0;
+  margin-top: 1px;
+}
+
+.timeline-content {
+  background: rgba(247, 245, 245, 0.801);
+  border-radius: 5px;
+  padding: 20px 25px;
+  box-shadow: 0 5px 15px rgba(59, 114, 233, 0.1);
+  flex: 1;
+  max-width: 400px;
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #001b44;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+}
+/*buttons*/
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.custom-btn {
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-weight: 400;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+  background-color: #005fa3;
+  transform: scale(1.05);
+}
+
+/*social icons*/
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  background-color: #fcfafa;
+  border: 1px solid #ffffff00;
+  border-radius: px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+</style>
+
+</body>
+</html>

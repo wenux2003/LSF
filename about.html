@@ -170,7 +170,7 @@
         </div>
         <div class="col-md-6">
           <div class="intro-right">
-            <img src="img/about/grup pic.webp" alt="LSF Icon" class="intro-icon">
+            <img src="img/about/lion.png" alt="LSF Icon" class="intro-icon">
             <p>
               Lanka Software Foundation is dedicated to leveraging open-source technologies to foster transparent,
               efficient, and inclusive governance and public services worldwide.
@@ -390,9 +390,16 @@
     }
 
     .team-caption {
-      padding: 15px 10px;
+      padding: 10px 10px;
       font-weight: 600;
       color: #001f3f;
+    }
+
+    .member-edu {
+    font-size: 0.85rem;
+    color: #444;
+    margin-top: 4px;
+    line-height: 1.4;
     }
 
     .swiper-button-next,
@@ -421,6 +428,7 @@
               <img src="img/linkedin.png" alt="LinkedIn">
             </a>
             <div class="team-caption">Nimal Perera</div>
+            <div class="member-edu">MSc in Data Privacy, University of Colombo</div>
           </div>
         </div>
 
@@ -432,6 +440,7 @@
               <img src="img/linkedin.png" alt="LinkedIn">
             </a>
             <div class="team-caption">Samanthi Silva</div>
+            <div class="member-edu">MSc in Data Privacy, University of Colombo</div>
           </div>
         </div>
 
@@ -443,6 +452,7 @@
               <img src="img/linkedin.png" alt="LinkedIn">
             </a>
             <div class="team-caption">Kasun Jayasuriya</div>
+            <div class="member-edu">MSc in Data Privacy, University of Colombo</div>
           </div>
         </div>
 
@@ -454,6 +464,7 @@
               <img src="img/linkedin.png" alt="LinkedIn">
             </a>
             <div class="team-caption">Thilini Gamage</div>
+            <div class="member-edu">MSc in Data Privacy, University of Colombo</div>
           </div>
         </div>
 
@@ -465,6 +476,7 @@
               <img src="img/linkedin.png" alt="LinkedIn">
             </a>
             <div class="team-caption">Ruwan Madushanka</div>
+            <div class="member-edu">MSc in Data Privacy, University of Colombo</div>
           </div>
         </div>
 
@@ -502,81 +514,97 @@
     });
   </script>
  
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!--final section-->
-  <!-- Contributors Slider -->
 <section class="contributors-section">
   <div class="container">
     <h2 class="section-title">Contributors & Supporters</h2>
-
-    <!-- Swiper -->
     <div class="swiper contributors-swiper">
       <div class="swiper-wrapper">
         <!-- Slide 1 -->
         <div class="swiper-slide">
-          <img src="img/about/strtupX.webp" alt="UMD Logo" class="contributor-logo" />
+          <img src="img/about/strtupX.webp" alt="StartupX Logo" class="contributor-logo" />
         </div>
         <!-- Slide 2 -->
         <div class="swiper-slide">
-          <img src="img/about/uniof marylnd.webp" alt="StartupX Logo" class="contributor-logo" />
+          <img src="img/about/uniof marylnd.webp" alt="University of Maryland Logo" class="contributor-logo" />
         </div>
         <!-- Slide 3 -->
         <div class="swiper-slide">
-          <img src="img/about/wso2.webp" alt="LK Domain Logo" class="contributor-logo" />
+          <img src="img/about/wso2.webp" alt="WSO2 Logo" class="contributor-logo" />
         </div>
         <!-- Slide 4 -->
         <div class="swiper-slide">
-          <img src="img/about/lk domain.webp" alt="WSO2 Logo" class="contributor-logo" />
+          <img src="img/about/lk domain.webp" alt="LK Domain Logo" class="contributor-logo" />
+        </div>
+        <!-- Duplicate for infinite loop effect -->
+        <div class="swiper-slide">
+          <img src="img/about/strtupX.webp" alt="StartupX Logo" class="contributor-logo" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/about/uniof marylnd.webp" alt="University of Maryland Logo" class="contributor-logo" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/about/wso2.webp" alt="WSO2 Logo" class="contributor-logo" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/about/lk domain.webp" alt="LK Domain Logo" class="contributor-logo" />
         </div>
       </div>
     </div>
   </div>
 </section>
+
 <style>
-  .contributors-section {
+.contributors-section {
   background-color: #e6f4f9;
   padding: 60px 0;
 }
-
 .contributors-section .container {
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
 }
-
 .section-title {
   font-size: 1.6rem;
   font-weight: 700;
   color: #001f3f;
   margin-bottom: 40px;
 }
-
 .contributor-logo {
   max-width: 180px;
   height: auto;
   margin: 0 auto;
   display: block;
 }
+.swiper {
+  padding-bottom: 24px;
+}
 </style>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-  new Swiper('.contributors-swiper', {
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
-    speed: 800,
-    slidesPerView: 2,
-    spaceBetween: 30,
-    breakpoints: {
-      768: { slidesPerView: 3 },
-      1024: { slidesPerView: 4 }
-    }
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.contributors-swiper', {
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      speed: 800,
+      slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: false, // Ensures only full slides are shown
+      breakpoints: {
+        768: { slidesPerView: 3 },
+        1024: { slidesPerView: 4 }
+      }
+    });
   });
 </script>
+
 
 </body>
 </html>

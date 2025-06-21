@@ -25,7 +25,7 @@
 </head>
 <body>
 
-<!-- ✅ FIXED NAVBAR -->
+<!--NAVBAR -->
 <header class="custom-header">
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container py-2 px-4 d-flex justify-content-between align-items-center" 
@@ -44,25 +44,25 @@
       <!-- Nav Links + Button -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#fellows">Fellows</a></li>
-          <li class="nav-item"><a class="nav-link" href="#get-involved">Get Involved</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="fellows.html">Fellows</a></li>
+          <li class="nav-item"><a class="nav-link" href="involved.html">Get Involved</a></li>
 
           <!-- Contact Us: show inside menu on mobile -->
           <li class="nav-item d-lg-none mt-2">
-            <a href="#contact" class="btn btn-primary btn-sm w-100">Contact Us</a>
+            <a href="contact.html" class="btn btn-primary btn-sm w-100">Contact Us</a>
           </li>
         </ul>
 
         <!-- Contact Us: desktop only -->
-        <a href="#contact" class="btn btn-primary btn-sm rounded-pill ms-3 d-none d-lg-inline-block">Contact Us</a>
+        <a href="contact.html" class="btn btn-primary btn-sm rounded-pill ms-3 d-none d-lg-inline-block">Contact Us</a>
       </div>
     </div>
   </nav>
 </header>
 
-<!-- ✅ STYLES -->
+<!--STYLES -->
 <style>
   /* Remove default white background & padding from mobile dropdown */
 .navbar-collapse {
@@ -594,135 +594,163 @@
       }
     }
   </style>
-<!--boxes scrolling-->
-<section class="testimonial-section text-center">
-  <div class="container">
-    <p class="text-uppercase text-primary fw-bold">Voices of Our Community</p>
-    <h2 class="fw-bold mb-4">Real-world Impact</h2>
-    <p class="text-muted mb-5">
-      Hear from government partners, open-source contributors, and international policymakers about how LSF is transforming digital governance and public infrastructure.
-    </p>
+<!--quotes moving section-->
+<section class="testimonial-section">
+  <p class="text-uppercase text-primary fw-bold">Voices of Our Community</p>
+  <h2 class="fw-bold mb-4">Real-world Impact</h2>
+  <p class="text-muted mb-5">
+    Hear from government partners, open-source contributors, and international policymakers about how LSF is transforming digital governance and public infrastructure.
+  </p>
 
-    <div class="testimonial-scroll-wrapper">
-      <div class="testimonial-scroll-track" id="scrollTrack">
-        <!-- Card 1 -->
-        <div class="testimonial-card">
-          <img src="img/home/quate.webp" class="quote-icon" alt="quote">
-          <p class="testimonial-text">Open source makes the world better. LSF is a big part of that.</p>
-          <p class="fw-bold mb-0">Jason Brody</p>
-          <p class="text-primary fw-bold">CEO, ABC Company</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="testimonial-card">
-          <img src="img/home/quate.webp" class="quote-icon" alt="quote">
-          <p class="testimonial-text">The way LSF empowers tech teams is simply transformative.</p>
-          <p class="fw-bold mb-0">Maria Silva</p>
-          <p class="text-primary fw-bold">Policy Lead, GovOrg</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="testimonial-card">
-          <img src="img/home/quate.webp" class="quote-icon" alt="quote">
-          <p class="testimonial-text">LSF makes collaboration between sectors actually work.</p>
-          <p class="fw-bold mb-0">Kevin Zhang</p>
-          <p class="text-primary fw-bold">CTO, OpenInfra</p>
-        </div>
-
-        <!-- Card 4 (Optional) -->
-        <div class="testimonial-card">
-          <img src="img/home/quate.webp" class="quote-icon" alt="quote">
-          <p class="testimonial-text">Government innovation is faster and easier thanks to LSF.</p>
-          <p class="fw-bold mb-0">Amara Jayasuriya</p>
-          <p class="text-primary fw-bold">Digital Ministry</p>
-        </div>
+  <div class="testimonial-scroll-wrapper">
+    <div class="testimonial-scroll-track" id="scrollTrack">
+      
+      <!-- Card 1 -->
+      <div class="testimonial-card">
+        <img src="img/home/quate.webp" class="quote-icon" alt="quote">
+        <p class="testimonial-text">Open source makes the world better. LSF is a big part of that.</p>
+        <p class="fw-bold mb-0">Jason Brody</p>
+        <p class="text-primary fw-bold">CEO, ABC Company</p>
       </div>
+
+      <!-- Card 2 -->
+      <div class="testimonial-card">
+        <img src="img/home/quate.webp" class="quote-icon" alt="quote">
+        <p class="testimonial-text">The way LSF empowers tech teams is simply transformative.</p>
+        <p class="fw-bold mb-0">Maria Silva</p>
+        <p class="text-primary fw-bold">Policy Lead, GovOrg</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="testimonial-card">
+        <img src="img/home/quate.webp" class="quote-icon" alt="quote">
+        <p class="testimonial-text">LSF makes collaboration between sectors actually work.</p>
+        <p class="fw-bold mb-0">Kevin Zhang</p>
+        <p class="text-primary fw-bold">CTO, OpenInfra</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="testimonial-card">
+        <img src="img/home/quate.webp" class="quote-icon" alt="quote">
+        <p class="testimonial-text">Government innovation is faster and easier thanks to LSF.</p>
+        <p class="fw-bold mb-0">Amara Jayasuriya</p>
+        <p class="text-primary fw-bold">Digital Ministry</p>
+      </div>
+
     </div>
   </div>
 </section>
-<style>
-  body {
-  background-color: #e9f6fc;
-}
-
-.testimonial-section {
-  padding: 60px 0;
-}
-
-.testimonial-scroll-wrapper {
-  overflow: hidden;
-}
-
-.testimonial-scroll-track {
-  display: flex;
-  gap: 2rem;
-  transition: transform 0.6s ease-in-out;
-}
-
-.testimonial-card {
-  flex: 0 0 48%;
-  max-width: 48%;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  text-align: left;
-  position: relative;
-}
-
-.testimonial-text {
-  font-style: italic;
-  color: #555;
-  margin-top: 30px;
-}
-
-.quote-icon {
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 45px;
-  opacity: 0.85;
-}
-
-/* ✅ Date badge style */
-.date-badge {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background-color: #0d6efd;
-  color: #fff;
-  font-size: 0.75rem;
-  padding: 3px 10px;
-  border-radius: 4px;
-  font-weight: 500;
-}
-
-/* Responsive tweak */
-@media (max-width: 768px) {
-  .testimonial-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-
-</style>
 
 <script>
-const track = document.getElementById('scrollTrack');
-const cards = document.querySelectorAll('.testimonial-card');
-let index = 0;
-const cardWidth = cards[0].offsetWidth + 32; // gap is 2rem = 32px
+  const track = document.getElementById('scrollTrack');
+  const cards = document.querySelectorAll('.testimonial-card');
+  let index = 0;
 
-function slideNext() {
-  index++;
-  if (index > cards.length - 2) index = 0;
-  track.style.transform = `translateX(-${index * cardWidth}px)`;
-}
+  function slideNext() {
+    const card = cards[0];
+    const gap = 32; // 2rem gap
+    const cardWidth = card.offsetWidth + gap;
+    const visibleCards = window.innerWidth <= 768 ? 1 : 2;
+    index++;
+    if (index > cards.length - visibleCards) index = 0;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
+  }
 
-setInterval(slideNext, 3000);
+  setInterval(slideNext, 3000);
+
+  window.addEventListener('resize', () => {
+    index = 0;
+    track.style.transform = `translateX(0px)`;
+  });
 </script>
 
+<style>
+    body {
+      background-color: #e9f6fc;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
+    .testimonial-section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .testimonial-section p.text-uppercase {
+      font-weight: bold;
+      color: #0d6efd;
+      text-transform: uppercase;
+    }
+
+    .testimonial-section h2 {
+      font-size: 32px;
+      margin: 10px 0 20px;
+    }
+
+    .testimonial-section .text-muted {
+      max-width: 700px;
+      margin: auto;
+      color: #666;
+    }
+
+    .testimonial-scroll-wrapper {
+      overflow: hidden;
+      position: relative;
+      margin-top: 40px;
+    }
+
+    .testimonial-scroll-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+      gap: 2rem;
+    }
+
+    .testimonial-card {
+      flex: 0 0 48%;
+      max-width: 48%;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      text-align: left;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+      margin-top: 30px;
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 40px;
+      opacity: 0.8;
+    }
+
+    .fw-bold {
+      font-weight: bold;
+    }
+
+    .text-primary {
+      color: #0d6efd;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .testimonial-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+
+<!-- box icon horizontal moving section -->
 
   <title>Resources & Articles Slider</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
