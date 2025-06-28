@@ -5,215 +5,288 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LSF Fellows</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* === HERO BANNER === */
-  .page-hero-image {
-    position: relative;
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
-  }
+  
+   <style>
+    body {
+      background-color: #e9f6fc;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-  .banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    margin: 0;
-  }
+    .page-hero-image {
+      position: relative;
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+    }
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+    .hero-text h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    }
 
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: rgb(255, 255, 255);
-  }
+    .section-container, .benefits, .who-apply {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 1200px;
+    }
 
-  .hero-text h1 {
-  font-size: 2rem; /* or 1.8rem or whatever you want */
-  font-weight: 700;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-}
-/*frist section*/
+    .section-container, .benefits {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
 
-  body {
-    background-color: #e9f6fa;
-    font-family: 'Segoe UI', sans-serif;
-  }
+    .section-text, .benefits-text {
+      flex: 2 1 300px;
+    }
 
-  .section-container {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    padding: 30px;
-    margin: 40px auto;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 30px;
-  }
+    .section-text h2, .benefits-text h4, .who-apply h4 {
+      font-weight: 700;
+      color: #001b44;
+      margin-bottom: 20px;
+    }
 
-  .section-text {
-    flex: 2;
-  }
+    .section-text p, .benefits-text p, .who-apply ul li {
+      color: #444;
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-  .section-text h2 {
-    font-weight: 700;
-    color: #001b44;
-    margin-bottom: 20px;
-  }
+    .tech-columns {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      border-top: 1px solid #888;
+      padding-top: 10px;
+      gap: 30px;
+    }
 
-  .section-text p {
-    color: #444;
-    font-size: 16px;
-  }
+    .tech-columns div {
+      flex: 1 1 120px;
+      font-weight: 500;
+    }
 
-  .tech-columns {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    border-top: 1px solid #888;
-    padding-top: 10px;
-    gap: 30px;
-  }
+    .image-block {
+      flex: 1 1 250px;
+      display: flex;
+      justify-content: flex-end;
+    }
 
-  .tech-columns div {
-    flex: 1 1 120px;
-    font-weight: 500;
-  }
+    .image-block img, .benefits img {
+      border-radius: 8px;
+      width: 100%;
+      max-width: 250px;
+      object-fit: cover;
+    }
 
-  .image-block {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-  }
+    .benefits-text ul {
+      list-style: none;
+      padding-left: 0;
+      columns: 2;
+    }
 
-  .image-block img {
-    border-radius: 8px;
-    width: 250px;
-    object-fit: cover;
-  }
+    .benefits-text ul li::before {
+      content: '●';
+      color: #0070c0;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
 
-  .benefits {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-  }
+    .benefits-text ul li {
+      padding: 6px 0;
+    }
 
-  .benefits-text {
-    flex: 2;
-  }
+    .who-apply ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
-  .benefits-text h4 {
-    font-weight: 700;
-    color: #0070c0;
-    margin-bottom: 10px;
-  }
+    .who-apply ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 12px;
+      color: #000;
+    }
 
-  .benefits-text ul {
-    list-style: none;
-    padding-left: 0;
-    columns: 2;
-  }
+    .who-apply ul li::before {
+      content: "●";
+      position: absolute;
+      left: 0;
+      color: #0087e7;
+      font-size: 18px;
+    }
 
-  .benefits-text ul li::before {
-    content: '●';
-    color: #0070c0;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
+    .lsf-banner-section {
+      background: linear-gradient(to bottom, #0072c6, #004e8c);
+      color: white;
+      padding: 60px 0;
+    }
 
-  .benefits-text ul li {
-    padding: 6px 0;
-  }
+    .custom-banner-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-  .benefits img {
-    max-width: 140px;
-  }
+    .custom-banner-text {
+      max-width: 500px;
+    }
 
-  .page-hero-image {
-    position: relative;
-    width: 100%;
-    height: 320px;
-    overflow: hidden;
-  }
+    .custom-banner-text h3 {
+      font-size: 1.7rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
 
-  .banner-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    margin: 0;
-  }
+    .custom-banner-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-  }
+    .custom-banner-logo img {
+      max-width: 350px;
+      opacity: 0.95;
+    }
 
-  .hero-text h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-  }
-  /*bullet point sec*/
-  .who-apply {
-  background: white;
-  border-radius: 8px;
-  padding: 30px;
-  margin: 30px auto 60px auto;
-  max-width: 1200px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
+    .custom-banner-text .btn {
+      padding: 10px 24px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
 
-.who-apply h4 {
-  font-weight: 700;
-  color: #001b44;
-  margin-bottom: 20px;
-}
+    .faq-section {
+      background-color: #e9f6fc;
+    }
 
-.who-apply ul {
-  list-style: none;
-  padding-left: 0;
-}
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      font-weight: bold;
+      font-size: 1.05rem;
+      text-align: left;
+      padding: 15px 0;
+      border-bottom: 1px solid #ccc;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
 
-.who-apply ul li {
-  position: relative;
-  padding-left: 20px;
-  margin-bottom: 12px;
-  color: #000000;
-  font-size: 16px;
-  line-height: 1.6;
-}
+    .faq-question:hover {
+      color: #0aa1dd;
+    }
 
-.who-apply ul li::before {
-  content: "●";
-  position: absolute;
-  left: 0;
-  color: #0087e7;
-  font-size: 18px;
-}
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      font-size: 0.95rem;
+      color: #444;
+    }
 
+    .faq-question.active + .faq-answer {
+      max-height: 300px;
+      opacity: 1;
+      padding-top: 10px;
+    }
+
+    .faq-question .icon {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .testimonial-section {
+      padding: 60px 0;
+    }
+
+    .testimonial-scroll-wrapper {
+      overflow: hidden;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .testimonial-scroll-track {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.6s ease;
+      flex-wrap: nowrap;
+    }
+
+    .testimonial-card {
+      flex: 0 0 48%;
+      max-width: 48%;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+      text-align: left;
+    }
+
+    .testimonial-card p {
+      margin: 0.5rem 0;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+      margin-top: 40px;
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 3px;
+      right: 20px;
+      width: 40px;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    @media (max-width: 768px) {
+      .section-container, .benefits {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .testimonial-card {
+        flex: 0 0 90%;
+        max-width: 90%;
+      }
+
+      .custom-banner-wrapper {
+        gap: 40px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -308,51 +381,7 @@
   </div>
 </section>
 
-<style>
-.lsf-banner-section {
-  background: linear-gradient(to bottom, #0072c6, #004e8c);
-  color: white;
-  padding: 60px 0;
-}
 
-.custom-banner-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  flex-wrap: wrap;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.custom-banner-text {
-  max-width: 500px;
-}
-
-.custom-banner-text h3 {
-  font-size: 1.7rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.custom-banner-text p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.custom-banner-logo img {
-  max-width: 350px;
-  opacity: 0.95;
-}
-
-.custom-banner-text .btn {
-  padding: 10px 24px;
-  font-weight: 500;
-  font-size: 1rem;
-}
-</style>
 <!-- faq section-->
  <section class="faq-section py-5">
   <div class="container">
@@ -407,116 +436,9 @@
 
   </div>
 </section>
-<style>
-  .faq-section {
-  background-color: #e9f6fc;
-}
 
-.faq-question {
-  width: 100%;
-  background: none;
-  border: none;
-  font-weight: bold;
-  font-size: 1.05rem;
-  text-align: left;
-  padding: 15px 0;
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.faq-question:hover {
-  color: #0aa1dd;
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.4s ease, opacity 0.3s ease;
-  font-size: 0.95rem;
-  color: #444;
-}
-
-.faq-question.active + .faq-answer {
-  max-height: 300px;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq-question .icon {
-  font-size: 1.2rem;
-  font-weight: bold;
-  transition: transform 0.2s;
-}
-
-</style>
 <!--quote -->
-  <style>
-    body {
-      background-color: #e9f6fc;
-    }
-
-    .testimonial-section {
-      padding: 60px 0;
-    }
-
-    .testimonial-scroll-wrapper {
-      overflow: hidden;         /* Hide scroll bar */
-      pointer-events: none;     /* Disable mouse drag */
-      user-select: none;
-    }
-
-    .testimonial-scroll-track {
-      display: flex;
-      gap: 2rem;
-      transition: transform 0.6s ease;
-      /* Prevent wrapping */
-      flex-wrap: nowrap;
-      /* Enable smooth scroll */
-      will-change: transform;
-    }
-
-    .testimonial-card {
-      flex: 0 0 48%;
-      max-width: 48%;
-      background: white;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      position: relative;
-      text-align: left;
-    }
-
-    .testimonial-card p {
-      margin: 0.5rem 0;
-    }
-
-    .testimonial-text {
-      font-style: italic;
-      color: #555;
-      margin-top: 40px;
-    }
-
-    .quote-icon {
-      position: absolute;
-      top: 3px;
-      right: 20px;
-      width: 40px;
-      opacity: 0.9;
-      pointer-events: none;
-    }
-
-    @media (max-width: 700px) {
-      .testimonial-card {
-        flex: 0 0 90%;
-        max-width: 90%;
-      }
-    }
-  </style>
+  
    <script src="js/script.js"></script>
 </body>
 </html>
