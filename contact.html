@@ -68,15 +68,41 @@
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="fellows.html">Fellows</a></li>
           <li class="nav-item"><a class="nav-link" href="involved.html">Get Involved</a></li>
-
-          <!-- Mobile Contact Button -->
-          <li class="nav-item d-lg-none mt-2">
-            <a href="contact.html" class="btn btn-primary btn-sm w-100">Contact Us</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
-        <!-- Desktop Contact Button -->
-        <a href="contact.html" class="btn btn-primary btn-sm rounded-pill ms-3 d-none d-lg-inline-block">Contact Us</a>
+<!-- NAVBAR STYLE -->
+<!-- NAVBAR SECTION -->
+<header class="custom-header">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container py-2 px-4 d-flex justify-content-between align-items-center"
+      style="width: 100%; max-width: 1140px; margin: 10px auto; border-radius: 50px; background-color: #ffffffd9; border: 1px solid #d0e8ff;">
+
+      <!-- LSF Logo -->
+      <a class="navbar-brand me-auto" href="index.html">
+        <img src="img/home/headlogo.webp" alt="LSF Logo" height="40">
+      </a>
+
+      <!-- Toggle Button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="fellows.html">Fellows</a></li>
+          <li class="nav-item"><a class="nav-link" href="involved.html">Get Involved</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
       </div>
     </div>
   </nav>
@@ -84,58 +110,46 @@
 
 <!-- NAVBAR STYLE -->
 <style>
-  .navbar {
-    padding: 0.3rem 1rem;
-    backdrop-filter: blur(8px);
-  }
-
-  .navbar-collapse {
-    background: transparent !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  .navbar-nav {
-    background: transparent !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
   .navbar-nav .nav-link {
     color: #333;
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: color 0.2s ease;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.2s ease, transform 0.2s ease;
   }
 
   .navbar-nav .nav-link:hover {
     color: #0d6efd;
+    transform: scale(1.07);
   }
 
-  .navbar-collapse .btn {
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    color: #ffffff;
-    background-color: #0d6efd !important;
-    border-radius: 6px;
-    margin-top: 0.75rem;
+  .navbar-brand img {
+    height: 40px;
   }
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
 
-  .navbar-toggler {
-    border: none !important;
-    background: none !important;
-    box-shadow: none !important;
-  }
 
-  .navbar-toggler-icon {
-    filter: brightness(0.1);
+  @media (max-width: 991.98px) {
+    .navbar {
+      border-radius: 0 0 20px 20px;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 1rem 0 0;
+    }
+
+    .navbar-nav .nav-link {
+      padding: 0.75rem 1rem;
+      width: 100%;
+    }
   }
 </style>
-
-
-
 
     <!--blue banner-->
     <section class="page-hero-image">
@@ -185,178 +199,342 @@
 </section>
 <style>
   .contact-section {
-  background-color: #e6f6fb;
-  padding: 60px 20px;
-  font-family: 'Segoe UI', sans-serif;
-}
+    background-color: #e6f6fb;
+    padding: 60px 20px 40px;
+    font-family: 'Segoe UI', sans-serif;
+  }
 
-.contact-section .container {
-  max-width: 1140px;
-  margin: auto;
-}
+  .contact-section .container {
+    max-width: 1140px;
+    margin: auto;
+  }
 
-.contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.contact-text {
-  flex: 1 1 350px;
-}
-
-.contact-text h5 {
-  text-transform: uppercase;
-  color: #004a99;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.contact-title {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.contact-p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.contact-card {
-  background: linear-gradient(to right, #0070c0, #004a99);
-  color: white;
-  padding: 30px;
-  flex: 1 1 350px;
-  border-radius: 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-}
-
-.contact-card h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.contact-card .small-heading {
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #e6e6e6;
-  margin-bottom: 8px;
-}
-
-.contact-card .email,
-.contact-card .phone {
-  font-size: 14px;
-  margin-bottom: 6px;
-  font-weight: 500;
-}
-
-.social-icons {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-}
-
-.social-icons img {
-  width: 24px;
-  height: 24px;
-}
-
-.lion-logo {
-  margin-top: 30px;
-  width: 90px;
-}
-
-/* === Buttons === */
-.contact-buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 25px;
-  border-radius: 4px;
-  text-align: center;
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-
-.btn-primary {
-  background-color: #0070c0;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #005fa3;
-}
-
-.btn-outline {
-  border: 2px solid #0070c0;
-  color: #0070c0;
-  background-color: transparent;
-}
-
-.btn-outline:hover {
-  background-color: #f1f1ff;
-  color: #004a99;
-}
-
-.btn-talk {
-  background-color: #004a99;
-  color: white;
-}
-
-.btn-talk:hover {
-  background-color: #002f66;
-}
-
-/* === Responsive Fixes === */
-@media (max-width: 768px) {
   .contact-grid {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px; /* 🔵 Reduces vertical space above blue box */
   }
 
+  .contact-text {
+    flex: 1 1 350px;
+  }
+
+  .contact-text h5 {
+    text-transform: uppercase;
+    color: #004a99;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .contact-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .contact-p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .contact-card {
+    background: linear-gradient(to right, #0070c0, #004a99);
+    color: white;
+    padding: 30px;
+    flex: 1 1 350px;
+    border-radius: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .contact-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .contact-card .small-heading {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #e6e6e6;
+    margin-bottom: 8px;
+  }
+
+  .contact-card .email,
+  .contact-card .phone {
+    font-size: 14px;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .lion-logo {
+    margin-top: 30px;
+    width: 90px;
+  }
+
+  /* === Buttons === */
   .contact-buttons {
-    flex-direction: column;
-    align-items: stretch;
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
   }
 
   .btn {
-    width: 100%;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 14px;
   }
-}
-.contact-buttons.bottom-buttons {
-  margin-top: 25px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  flex-wrap: wrap;
-}
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+  .btn-primary {
+    background-color: #0070c0;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #004a99;
+  }
+
+  .btn-outline {
+    border: 2px solid #0070c0;
+    color: #0070c0;
+    background-color: transparent;
+  }
+
+  .btn-outline:hover {
+    background-color: #f1f1ff;
+    color: #004a99;
+  }
+
+  .btn-talk {
+    background-color: #004a99;
+    color: white;
+    margin-bottom: 10px;
+  }
+
+  .btn-talk:hover {
+    background-color: #0070c0;
+  }
+
   .contact-buttons.bottom-buttons {
-    flex-direction: column;
-    align-items: stretch;
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
   }
 
-  .btn {
-    width: 100%;
+  /* 🔧 Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .contact-grid {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-buttons,
+    .contact-buttons.bottom-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .btn,
+    .btn-talk {
+      width: 100%;
+    }
+
+    .contact-card {
+      width: 100%;
+      padding: 25px 20px;
+    }
   }
+</style>
+
+  
+<!-- faq section-->
+ <section class="faq-section py-5">
+  <div class="container">
+    <p class="text-uppercase text-primary fw-bold">FAQ</p>
+    <h2 class="fw-bold mb-4">Have any question? Find answer here.</h2>
+
+    <div class="faq-item"> <!--Q1-->
+      <button class="faq-question">
+        <span class="question-text">What is Lanka Software Foundation ?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Lanka Software Foundation (LSF) is a Non-governmental non profit organization to support technical upgradation of Sri Lanka's public infrastructure and beyond to the global governments by helping digital solution designing, and open-source community's works.</p>
+      </div>
+    </div>
+    <div class="faq-item"> <!--Q2-->
+      <button class="faq-question">
+        <span class="question-text">How can I get involved with LSF projects and help them?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>Starting from our "Get Involved" page would be ideal. Here you can choose the current project you are most interested in and can handle from a list. We welcome hobbyists as well as developers, scholars, legislators, and more.</p>
+      </div>
+    </div>
+    <div class="faq-item"> <!--Q3-->
+      <button class="faq-question">
+        <span class="question-text">What kinds of projects do LSF funds?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>LSF encourages the incubation of open-source projects which are innovative in nature and predominantly serve digital governance, public infrastructure, e-government, digital identity, finance, etc.</p>
+      </div>
+    </div>
+    <div class="faq-item"> <!--Q4-->
+      <button class="faq-question">
+        <span class="question-text">Are there mentorship or internship opportunities available at LSF?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>LSF offers mentorship and internship programs that provide professional guidance and hands-on exposure along with certain other advantages such as networking and career development in technology and open-source domains.</p>
+      </div>
+    </div>
+    <div class="faq-item"> <!--Q5-->
+      <button class="faq-question">
+        <span class="question-text">Who are LSF’s main partners and collaborators?</span>
+        <span class="icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>LSF has a worldwide view of the collaborations like governments, international institutions, universities, private-sector technology entrepreneurs, and open-source communities working together on cutting-edge digital transformation projects.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<style>
+  .faq-section {
+  background-color: #e9f6fc;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  text-align: left;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+  color: #0aa1dd;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.faq-question.active + .faq-answer {
+  max-height: 300px;
+  opacity: 1;
+  padding-top: 10px;
+}
+
+.faq-question .icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.2s;
 }
 
 </style>
-  
+<!--quote -->
+  <style>
+    body {
+      background-color: #e9f6fc;
+    }
+
+    .testimonial-section {
+      padding: 60px 0;
+    }
+
+    .testimonial-scroll-wrapper {
+      overflow: hidden;         /* Hide scroll bar */
+      pointer-events: none;     /* Disable mouse drag */
+      user-select: none;
+    }
+
+    .testimonial-scroll-track {
+      display: flex;
+      gap: 2rem;
+      transition: transform 0.6s ease;
+      /* Prevent wrapping */
+      flex-wrap: nowrap;
+      /* Enable smooth scroll */
+      will-change: transform;
+    }
+
+    .testimonial-card {
+      flex: 0 0 48%;
+      max-width: 48%;
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: relative;
+      text-align: left;
+    }
+
+    .testimonial-card p {
+      margin: 0.5rem 0;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #555;
+      margin-top: 40px;
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 3px;
+      right: 20px;
+      width: 40px;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    @media (max-width: 700px) {
+      .testimonial-card {
+        flex: 0 0 90%;
+        max-width: 90%;
+      }
+    }
+  </style>
+<script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
   </html>
