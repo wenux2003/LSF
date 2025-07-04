@@ -24,81 +24,114 @@
   </style>
 </head>
 <body>
-
-<!--NAVBAR -->
+<!-- NAVBAR SECTION -->
 <header class="custom-header">
   <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container py-2 px-4 d-flex justify-content-between align-items-center" 
-         style="background-color: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px); width: 100%;">
-      
-      <!-- LSF Logo Left-Aligned -->
-      <a class="navbar-brand me-auto" href="#">
+    <div class="container py-2 px-4 d-flex justify-content-between align-items-center"
+      style="width: 100%; max-width: 1140px; margin: 10px auto; border-radius: 50px; background-color: #ffffffd9; border: 1px solid #d0e8ff;">
+
+      <!-- LSF Logo -->
+      <a class="navbar-brand me-auto" href="index.html">
         <img src="img/home/headlogo.webp" alt="LSF Logo" height="40">
       </a>
 
-      <!-- Toggle for Mobile -->
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <!-- Toggle Button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Nav Links + Button -->
+      <!-- Collapsible Menu -->
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="fellows.html">Fellows</a></li>
           <li class="nav-item"><a class="nav-link" href="involved.html">Get Involved</a></li>
-
-          <!-- Contact Us: show inside menu on mobile -->
-          <li class="nav-item d-lg-none mt-2">
-            <a href="contact.html" class="btn btn-primary btn-sm w-100">Contact Us</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
-
-        <!-- Contact Us: desktop only -->
-        <a href="contact.html" class="btn btn-primary btn-sm rounded-pill ms-3 d-none d-lg-inline-block">Contact Us</a>
       </div>
     </div>
   </nav>
 </header>
 
-<!--STYLES -->
+<!-- NAVBAR STYLE -->
+<!-- NAVBAR SECTION -->
+<header class="custom-header">
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container py-2 px-4 d-flex justify-content-between align-items-center"
+      style="width: 100%; max-width: 1140px; margin: 10px auto; border-radius: 50px; background-color: #e3eefa; border: 1px solid #abd5ff;">
+
+      <!-- LSF Logo -->
+      <a class="navbar-brand me-auto" href="index.html">
+        <img src="img/home/headlogo.webp" alt="LSF Logo" height="40">
+      </a>
+
+      <!-- Toggle Button -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Collapsible Menu -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="fellows.html">Fellows</a></li>
+          <li class="nav-item"><a class="nav-link" href="involved.html">Get Involved</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- NAVBAR STYLE -->
 <style>
-  /* Remove default white background & padding from mobile dropdown */
-.navbar-collapse {
-  background: transparent !important;
+  .navbar-nav .nav-link {
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #0d6efd;
+    transform: scale(1.07);
+  }
+
+  .navbar-brand img {
+    height: 40px;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+  outline: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
 }
 
-/* Remove blue bg box around Contact Us in mobile */
-.navbar-collapse .btn {
-  background-color: transparent !important;
-  border: none !important;
-  color: #0d6efd !important;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  width: auto !important;
-  text-align: left;
-}
 
-/* Optional: smooth nav link look */
-.navbar-nav .nav-link {
-  color: #333;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  transition: color 0.2s ease;
-  background: transparent !important;
-  border: none !important;
-}
+  @media (max-width: 991.98px) {
+    .navbar {
+      border-radius: 0 0 20px 20px;
+    }
 
-/* On hover */
-.navbar-nav .nav-link:hover {
-  color: #0d6efd;
-  background-color: transparent !important;
-}
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 1rem 0 0;
+    }
 
+    .navbar-nav .nav-link {
+      padding: 0.75rem 1rem;
+      width: 100%;
+    }
+  }
 </style>
+
 
 
 <section class="hero-section py-5">
@@ -122,8 +155,8 @@
           management and elections to education and environmental sustainability.
         </p>
         <div class="mt-4">
-          <a href="#our-projects" class="btn btn-primary btn-lg me-2">Our Projects</a>
-          <a href="#get-involved" class="btn btn-outline-primary btn-lg">Get Involved</a>
+          <a href="projects.html" class="btn btn-primary btn-lg me-2">Our Projects</a>
+          <a href="contact.html" class="btn btn-outline-primary btn-lg">Get Involved</a>
         </div>
       </div>
 
@@ -349,7 +382,7 @@
           Engage deeply with transformative open-source projects, enhance your technical expertise,
           network, and actively contribute to global digital public infrastructure.
         </p>
-        <a href="#" class="btn btn-primary mb-4">Apply</a>
+        <a href="involved.html" class="btn btn-primary mb-4">Apply</a>
 
         <!-- Image below -->
         <img src="img/home/grup.webp" alt="LSF Team" class="img-fluid rounded shadow">
@@ -398,7 +431,7 @@
           Join us on our journey to create technologies that will make all the difference and
           revolutionize the world of digital governance in every corner of the globe.
         </p>
-        <a href="#get-involved" class="btn btn-light mt-3">Get Involved</a>
+        <a href="involved.html" class="btn btn-light mt-3">Get Involved</a>
       </div>
 
       <!-- Right Image -->
@@ -829,7 +862,7 @@
       </button>
     </div>
 
-    <a href="#" class="btn btn-primary mt-4">Read More</a>
+    <a href="news.html" class="btn btn-primary mt-4">Read More</a>
   </div>
 </section>
   <!-- Footer -->
@@ -840,10 +873,10 @@
       <div class="col-6 col-md-3">
         <h6 class="fw-bold">Menu</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">Home</a></li>
-          <li><a href="#" class="footer-link">About</a></li>
-          <li><a href="#" class="footer-link">Board Of Directors</a></li>
-          <li><a href="#" class="footer-link">LSF Fellows</a></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="directors.html" class="footer-link">Board Of Directors</a></li>
+          <li><a href="fellows.html" class="footer-link">LSF Fellows</a></li>
         </ul>
       </div>
 
@@ -851,25 +884,30 @@
         <h6 class="fw-bold">Information</h6>
         <ul class="list-unstyled">
           <li><a href="#" class="footer-link">What We Do</a></li>
-          <li><a href="#" class="footer-link">News & Insights</a></li>
-          <li><a href="#" class="footer-link">Get Involved</a></li>
-          <li><a href="#" class="footer-link">Contact Us</a></li>
+          <li><a href="news.html" class="footer-link">News & Insights</a></li>
+          <li><a href="involved.html" class="footer-link">Get Involved</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Us</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-3">
         <h6 class="fw-bold">Information</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">Privacy Policy</a></li>
-          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="about.html" class="footer-link">Terms & Conditions</a></li>
         </ul>
       </div>
 
       <div class="col-6 col-md-3">
-        <h6 class="fw-bold">Information</h6>
-        <p class="mb-1">+94-777374957</p>
-        <p class="mb-0">contact@opensource.lk</p>
-      </div>
+  <h6 class="fw-bold">Information</h6>
+  <p class="mb-1">
+    <a href="tel:+94777374957" class="footer-link">+94-777374957</a>
+  </p>
+  <p class="mb-0">
+    <a href="mailto:contact@opensource.lk" class="footer-link">contact@opensource.lk</a>
+  </p>
+</div>
+
     </div>
 
     <div class="d-flex justify-content-center gap-3 mt-4">
@@ -893,51 +931,47 @@
   padding: 60px 20px 30px;
 }
 
+/* Footer Headings */
+.footer-section h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
 /* Footer Links */
 .footer-link {
   color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 
 .footer-link:hover {
   color: #cce8ff;
-  transform: scale(1.05);
   text-decoration: underline;
 }
 
-/* Contact Text */
+/* Contact Info */
 .footer-section p {
   margin-bottom: 0.3rem;
   font-size: 0.9rem;
 }
 
-/* Footer Headings */
-.footer-section h6 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
 /* Social Icons */
 .footer-icon {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: white;
-  padding: 0.4rem 0.6rem;
-  border-radius: 50%;
-  background-color: transparent;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
 }
 
 .footer-icon:hover {
-  background-color: white;
-  color: #01579b;
-  transform: scale(1.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #cce8ff;
+  transform: scale(1.1);
 }
 
-/* Spacing for bottom row */
+/* Footer Bottom Row */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
@@ -947,30 +981,41 @@
   font-size: 0.85rem;
 }
 
-/* Responsive Tweaks for Phone */
+/* Responsive: Stack columns & center items */
 @media (max-width: 768px) {
+  /* Stack footer into two columns instead of one */
+  .footer-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
   .footer-section .row > div {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 48%;
+    max-width: 48%;
     margin-bottom: 1rem;
-    text-align: center;
+    text-align: left;
   }
 
-  .footer-icon {
-    margin: 0 6px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-
+  /* Center social icons */
   .footer-section .d-flex.justify-content-center {
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
     margin-top: 20px;
+  }
+
+  /* Footer bottom text align */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+
+  /* Optional: Center heading if needed */
+  .footer-section h6 {
+    text-align: left;
   }
 }
 
